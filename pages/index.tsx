@@ -30,7 +30,13 @@ export default function HomePage({ messages }: Props) {
         </ul>
       )}
       <Form form={form}>
-        <label>Message <input value={form.data.text} onChange={event => form.setData("text", event.target.value)} /></label>
+        <label>
+          Message{" "}
+          <input
+            value={form.data.text}
+            onChange={(event) => form.setData("text", event.target.value)}
+          />
+        </label>
         <button disabled={form.pending}>Add message</button>
       </Form>
     </main>
