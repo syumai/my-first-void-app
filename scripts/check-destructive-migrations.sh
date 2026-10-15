@@ -16,6 +16,10 @@ fi
 status=$(vp exec void db status 2>&1 | sed -E 's/\x1b\[[0-9;]*m//g') || true
 echo "$status"
 
+if ! grep -q "remote:" <<<"$status"; then
+  echo "警告: リモート DB のマイグレーション状況を取得できませんでした。未適用として扱います。" >&2
+fi
+
 pending=()
 for file in $destructive_files; do
   name=$(basename "$file")
