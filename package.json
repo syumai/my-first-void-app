@@ -14,10 +14,12 @@
   },
   "devDependencies": {
     "@hono/cli": "1.0.0-rc.7",
+    "@tailwindcss/vite": "^4.3.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "@void/react": "0.28.0",
     "oxc-transform-react": "^0.149.0",
+    "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
     "vite": "npm:@voidzero-dev/vite-plus-core@^1.2.0",
     "vite-plus": "^1.2.0",
