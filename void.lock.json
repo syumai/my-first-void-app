@@ -1,9 +1,21 @@
 {
   "version": 1,
-  "source": {},
+  "source": {
+    "workers_dev": false
+  },
   "resolved": {
     "account_id": "5ed0b0e0978daf260b9f5a2323af0fb5",
-    "compatibility_date": "2026-02-24"
+    "compatibility_date": "2026-02-24",
+    "workers_dev": false,
+    "d1_databases": [
+      {
+        "binding": "DB",
+        "database_name": "my-first-void-app-db",
+        "database_id": "915f8b1b-0307-4f70-adfb-9f6341b8eff6",
+        "migrations_dir": "./db/migrations"
+      }
+    ],
+    "name": "my-first-void-app"
   },
-  "text": "{\n  \"account_id\": \"5ed0b0e0978daf260b9f5a2323af0fb5\",\n  \"compatibility_date\": \"2026-02-24\"\n}\n"
+  "text": "{\n  \"account_id\": \"5ed0b0e0978daf260b9f5a2323af0fb5\",\n  \"compatibility_date\": \"2026-02-24\",\n  \"workers_dev\": false,\n  \"d1_databases\": [\n    {\n      \"binding\": \"DB\",\n      \"database_name\": \"my-first-void-app-db\",\n      \"database_id\": \"915f8b1b-0307-4f70-adfb-9f6341b8eff6\",\n      \"migrations_dir\": \"./db/migrations\"\n    }\n  ],\n  \"name\": \"my-first-void-app\"\n}\n"
 }

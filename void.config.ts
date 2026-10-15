@@ -5,4 +5,7 @@ export default defineConfig({
   worker: {
     compatibility_date: "2026-02-24",
   },
+  cloudflare: {
+    workers_dev: false,
+  },
 });
