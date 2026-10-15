@@ -22,5 +22,11 @@
     "vite-plus": "^0.1.21",
     "void": "0.28.0"
   },
-  "packageManager": "pnpm@11.28.2"
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "error"
+    }
+  }
 }
