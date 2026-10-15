@@ -18,8 +18,8 @@
     "@void/react": "0.28.0",
     "oxc-transform-react": "^0.149.0",
     "typescript": "^7.0.2",
-    "vite": "^8.0.10",
-    "vite-plus": "^0.1.21",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^1.2.0",
+    "vite-plus": "^1.2.0",
     "void": "0.28.0"
   },
   "devEngines": {
