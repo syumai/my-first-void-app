@@ -3,3 +3,5 @@ allowBuilds:
   esbuild: true
   sharp: true
   workerd: true
+minimumReleaseAgeExclude:
+  - '@hono/cli@1.0.0-rc.7'
