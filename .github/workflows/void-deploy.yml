@@ -2,6 +2,12 @@ name: Deploy to Cloudflare
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      allow_destructive:
+        description: "Allow destructive migrations (DROP / DELETE etc.) to run against the remote database"
+        type: boolean
+        default: false
 
 concurrency:
   group: void-cloudflare-deploy-${{ github.repository }}-${{ github.ref }}
@@ -20,6 +26,11 @@ jobs:
           node-version: lts/*
           cache: true
       - run: vp install --frozen-lockfile
+      - name: Check destructive migrations
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ALLOW_DESTRUCTIVE: ${{ github.event_name == 'workflow_dispatch' && inputs.allow_destructive }}
+        run: scripts/check-destructive-migrations.sh
       - name: Deploy
         env:
           # Add this scoped token at Settings → Secrets and variables → Actions.
